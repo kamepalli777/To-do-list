@@ -1,149 +1,49 @@
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  background: #f8fafc;
-  color: #333;
-}
-
-.app {
-  max-width: 800px;
-  margin: auto;
+  background: #f7f7f7;
+  display: flex;
+  justify-content: center;
   padding: 20px;
 }
 
-header {
+.container {
+  width: 400px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
   text-align: center;
-  margin-bottom: 20px;
 }
 
-header h1 {
-  margin: 0 0 10px;
-  color: #2563eb;
-}
-
-nav {
+.input-section {
   display: flex;
-  justify-content: center;
   gap: 10px;
-}
-
-.tab {
-  padding: 10px 20px;
-  border: none;
-  background: #e5e7eb;
-  cursor: pointer;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-.tab.active {
-  background: #2563eb;
-  color: #fff;
-}
-
-.actions {
-  display: flex;
-  justify-content: space-between;
   margin-bottom: 20px;
 }
 
-.actions button,
-.actions select {
+input {
+  flex: 1;
   padding: 10px;
-  border-radius: 5px;
-  border: none;
-  background: #2563eb;
-  color: white;
+}
+
+button {
+  padding: 10px 15px;
   cursor: pointer;
 }
 
-.actions select {
-  background: #f3f4f6;
-  color: #333;
+ul {
+  list-style: none;
+  padding: 0;
 }
 
-.task-list {
-  display: grid;
-  gap: 15px;
-}
-
-.task-card {
-  background: white;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.task-card.completed {
-  opacity: 0.6;
-  text-decoration: line-through;
-}
-
-.task-meta {
-  font-size: 12px;
-  color: gray;
-}
-
-.task-actions {
-  margin-top: 10px;
-}
-
-.task-actions button {
-  margin-right: 5px;
-  padding: 5px 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.task-actions .complete { background: #22c55e; color: white; }
-.task-actions .edit { background: #facc15; }
-.task-actions .delete { background: #ef4444; color: white; }
-
-footer {
-  margin-top: 20px;
-  text-align: center;
-  color: gray;
-}
-
-footer button {
-  background: #ef4444;
-  color: white;
-  padding: 8px 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-content {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  width: 300px;
-}
-
-.modal-content h2 { margin-top: 0; }
-
-.modal-content input,
-.modal-content textarea,
-.modal-content select {
-  width: 100%;
-  margin-bottom: 10px;
+li {
+  background: #e6e6e6;
+  margin-bottom: 5px;
   padding: 8px;
   border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-.modal-actions {
   display: flex;
   justify-content: space-between;
 }
