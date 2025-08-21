@@ -3,72 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Task Manager</title>
+  <title>To-Do List</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="app">
-    <header>
-      <h1>Task Manager</h1>
-      <nav>
-        <button class="tab active" data-tab="today">Today's Tasks</button>
-        <button class="tab" data-tab="history">Task History</button>
-      </nav>
-    </header>
-
-    <main>
-      <!-- Today’s tasks -->
-      <section id="today" class="tab-content active">
-        <div class="actions">
-          <button id="addTaskBtn">+ Add New Task</button>
-          <select id="filter">
-            <option value="all">All</option>
-            <option value="pending">Pending</option>
-            <option value="completed">Completed</option>
-            <option value="high">High Priority</option>
-          </select>
-        </div>
-        <div id="taskList" class="task-list"></div>
-      </section>
-
-      <!-- Task history -->
-      <section id="history" class="tab-content">
-        <div id="taskHistory" class="task-list"></div>
-      </section>
-    </main>
-
-    <footer>
-      <button id="clearAll">Clear All Data</button>
-      <p>Auto-saved locally</p>
-    </footer>
-  </div>
-
-  <!-- Modal for adding tasks -->
-  <div id="taskModal" class="modal">
-    <div class="modal-content">
-      <h2>Add New Task</h2>
-      <label>Title</label>
-      <input type="text" id="taskTitle" placeholder="Task title">
-
-      <label>Description</label>
-      <textarea id="taskDesc" placeholder="Task description"></textarea>
-
-      <label>Priority</label>
-      <select id="taskPriority">
-        <option value="normal">Normal</option>
-        <option value="high">High</option>
-      </select>
-
-      <label>Reminder</label>
-      <input type="datetime-local" id="taskReminder">
-
-      <div class="modal-actions">
-        <button id="saveTask">Save Task</button>
-        <button id="cancelTask">Cancel</button>
-      </div>
+  <div class="container">
+    <h1>To-Do List</h1>
+    <div class="input-section">
+      <input type="text" id="taskInput" placeholder="Enter a new task...">
+      <button onclick="addTask()">Add</button>
     </div>
-  </div>
 
+    <h2>Today's Tasks</h2>
+    <ul id="taskList"></ul>
+
+    <h2>History</h2>
+    <div id="history"></div>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
